@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -16,7 +17,7 @@ import com.example.recyclerview.util.EmailClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
-//STEP 4 FOR ALLOWING YOUR ITEMS TO BE CLICKED:
+//STEP 3 FOR ALLOWING YOUR ITEMS TO BE CLICKED:
 //make your activity implement your item click listener interface
 public class MainActivity extends AppCompatActivity implements EmailClickListener {
     //STEP 5: Declare and initialize your recyclerview
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements EmailClickListene
         initializeViews();
         getData();
         setUpRecyclerView();
+
     }
 
     //I'll primarily use this function to just initialize my views in my onCreate method
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements EmailClickListene
 
     @Override
     public void onEmailClicked(View view, int position) {
-        //STEP 4B FOR ALLOWING YOUR ITEMS TO BE CLICKED
+        //STEP 3B FOR ALLOWING YOUR ITEMS TO BE CLICKED
         //define this method
         //define what we want to do in our on click
         Toast.makeText(this,

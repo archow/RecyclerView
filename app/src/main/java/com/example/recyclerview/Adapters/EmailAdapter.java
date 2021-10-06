@@ -56,9 +56,12 @@ public class EmailAdapter extends RecyclerView.Adapter<EmailViewHolder> {
 //                LayoutInflater.from(context).inflate(R.layout.email_item, parent, false)
 //        );
 
-        //STEP 5 FOR ALLOWING YOUR ITEMS TO BE CLICKED
+        //STEP 4 FOR ALLOWING YOUR ITEMS TO BE CLICKED
         //we can pass our listener here and set it to our Viewholder
         //but..how do?
+        //we had made our activity (which is a context) implement our listener interface
+        //whihc means it's an instance of our listener
+        //that's the listener that we'll set to our viewholder
         EmailViewHolder emailViewHolder = new EmailViewHolder(myView);
         emailViewHolder.setListener((EmailClickListener) context);
         return emailViewHolder;
